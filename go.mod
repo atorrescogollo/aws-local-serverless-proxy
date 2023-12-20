@@ -1,5 +1,5 @@
-module github.com/atorrescogollo/aws-lambda-serverless-proxy
+module github.com/atorrescogollo/aws-local-serverless-proxy
 
-go 1.19
+go 1.20
 
 require github.com/aws/aws-lambda-go v1.42.0

@@ -2,23 +2,23 @@
 HTTP API gateway for locally testing AWS lambdas
 
 ### Setup
-* Download from [releases assets](https://github.com/atorrescogollo/aws-lambda-serverless-proxy/releases):
+* Download from [releases assets](https://github.com/atorrescogollo/aws-local-serverless-proxy/releases):
 ```bash
-curl -Lo aws-lambda-serverless-proxy \
-    "https://github.com/atorrescogollo/aws-lambda-serverless-proxy/releases/download/<VERSION>/aws-lambda-serverless-proxy_<OS>_<ARCH>"
-chmod +x aws-lambda-serverless-proxy
+curl -Lo aws-local-serverless-proxy \
+    "https://github.com/atorrescogollo/aws-local-serverless-proxy/releases/download/<VERSION>/aws-local-serverless-proxy_<OS>_<ARCH>"
+chmod +x aws-local-serverless-proxy
 
-AWS_LAMBDA_RUNTIME_API=localhost:9000 ./aws-lambda-serverless-proxy
+AWS_LAMBDA_RUNTIME_API=localhost:9000 ./aws-local-serverless-proxy
 ```
 
 * With docker:
 ```bash
-docker pull ghrc.io/atorrescogollo/aws-lambda-serverless-proxy:<VERSION>
+docker pull ghrc.io/atorrescogollo/aws-local-serverless-proxy:<VERSION>
 
 docker run \
     -p 8080:8080 \
     -e AWS_LAMBDA_RUNTIME_API=lambda:8080 \
-    ghrc.io/atorrescogollo/aws-lambda-serverless-proxy:<VERSION>
+    ghrc.io/atorrescogollo/aws-local-serverless-proxy:<VERSION>
 ```
 
 * With docker-compose:
@@ -27,7 +27,7 @@ version: '3.7'
 
 services:
   proxy:
-    image: ghrc.io/atorrescogollo/aws-lambda-serverless-proxy:<VERSION>
+    image: ghrc.io/atorrescogollo/aws-local-serverless-proxy:<VERSION>
     ports:
       - 8080:8080
     environment:
