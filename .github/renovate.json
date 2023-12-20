@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(fix)"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchDatasources": ["golang-version"],
+      "groupName": "Golang",
+      "groupSlug": "golang"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchDepNames": ["golang"],
+      "groupName": "Golang",
+      "groupSlug": "golang"
+    }
+  ]
+}
