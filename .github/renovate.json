@@ -1,0 +1,35 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(fix)"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^go.mod$"],
+      "matchStrings": ["^go (?<currentValue>.*)$"],
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "golang/go"
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "golang/go",
+        "golang"
+      ],
+      "matchManagers": [
+        "dockerfile",
+        "regex"
+      ],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "groupSlug": "golang/go",
+      "groupName": "Golang"
+    }
+  ]
+}
