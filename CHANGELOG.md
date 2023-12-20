@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3](https://github.com/atorrescogollo/aws-local-serverless-proxy/compare/v1.0.2...v1.0.3) (2023-12-20)
+
+
+### Bug Fixes
+
+* **deps:** update module github.com/aws/aws-lambda-go to v1.43.0 ([#3](https://github.com/atorrescogollo/aws-local-serverless-proxy/issues/3)) ([ac8267f](https://github.com/atorrescogollo/aws-local-serverless-proxy/commit/ac8267f0d04f7b851b02acc87ef6931cbf9944ea))
+
 ## [1.0.2](https://github.com/atorrescogollo/aws-local-serverless-proxy/compare/v1.0.1...v1.0.2) (2023-12-20)
 
 

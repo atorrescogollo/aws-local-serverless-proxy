@@ -12,7 +12,7 @@ RUN go build --ldflags '-linkmode external -extldflags=-static' main.go
 
 FROM scratch AS runtime
 LABEL org.opencontainers.image.source "https://github.com/atorrescogollo/aws-local-serverless-proxy"
-LABEL org.opencontainers.image.version "v1.0.2"
+LABEL org.opencontainers.image.version "v1.0.3"
 LABEL org.opencontainers.image.authors "Álvaro Torres Cogollo <atorrescogollo@gmail.com>"
 LABEL org.opencontainers.image.licenses GPL-3.0-or-later
 LABEL org.opencontainers.image.title "AWS Local Serverless Proxy"
