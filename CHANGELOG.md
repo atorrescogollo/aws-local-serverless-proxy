@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1](https://github.com/atorrescogollo/aws-lambda-serverless-proxy/compare/v1.0.0...v1.0.1) (2023-12-20)
+
+
+### Bug Fixes
+
+* Dockerfile labels and docs ([df94024](https://github.com/atorrescogollo/aws-lambda-serverless-proxy/commit/df940240dd2a0836ff5364ac96fe33c95439d347))
+
 ## 1.0.0 (2023-12-20)
 
 
