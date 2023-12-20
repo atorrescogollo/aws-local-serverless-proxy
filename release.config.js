@@ -5,7 +5,7 @@ module.exports = {
   "ci": false,
   "plugins": [
     ["@semantic-release/exec", {
-      "prepareCmd": "echo '${nextRelease.version}' > .version",
+      "prepareCmd": "echo '${nextRelease.version}' > .version && sed -i 's|^\\(LABEL org.opencontainers.image.version\\) .*|\\1 \"v${nextRelease.version}\"|g' Dockerfile",
       "shell": true,
     }],
     ["@semantic-release/commit-analyzer", {
@@ -21,6 +21,7 @@ module.exports = {
     ["@semantic-release/git", {
       "assets": [
         "CHANGELOG.md",
+        "Dockerfile",
       ],
       "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
     }],
